@@ -7,3 +7,57 @@ body {
   padding: 0.5rem;
   /* remはHTMLの文字の相対サイズ*/
 }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.center {
+  flex: 1;
+  justify-content: center;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+}
+
+button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+@media (max-width: 768px) {
+  .center {
+    display: none;
+  }
+}
