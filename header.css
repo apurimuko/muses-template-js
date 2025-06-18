@@ -59,7 +59,7 @@ header > div {
   display: flex;
   justify-content: center;
 }
-#logout-button button {
+button {
   background-color: #555;
   color: white;
   border: none;

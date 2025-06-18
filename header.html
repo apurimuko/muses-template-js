@@ -14,45 +14,18 @@
         <span></span>
       </div>
 
-      <div id="pc-label">PC版</div>
+      <div id="pc-label">
+        <button>PC版</button>
+      </div>
 
       <div id="time">残り時間<br /><span id="clock">--:--</span></div>
 
       <div id="username">ユーザー名<br />Taro</div>
 
       <div id="logout-button">
-        <button onclick="logout()">ログアウト</button>
+        <button>ログアウト</button>
       </div>
     </header>
-
-    <script>
-      // ハンバーガーメニューの操作（必要ならメニューを表示）
-      function toggleMenu() {
-        alert("メニューを開く処理をここに追加");
-      }
-
-      // ログアウト処理
-      function logout() {
-        alert("ログアウトしました");
-      }
-
-      // 残り時間のタイマー表示
-      let remainingSeconds = 570; // 9分30秒
-
-      function updateTime() {
-        const minutes = Math.floor(remainingSeconds / 60);
-        const seconds = remainingSeconds % 60;
-        document.getElementById("clock").textContent = `${minutes}:${seconds
-          .toString()
-          .padStart(2, "0")}`;
-
-        if (remainingSeconds > 0) {
-          remainingSeconds--;
-          setTimeout(updateTime, 1000);
-        }
-      }
-
-      updateTime();
-    </script>
+    <script src="header.js"></script>
   </body>
 </html>
