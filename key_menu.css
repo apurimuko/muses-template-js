@@ -11,4 +11,6 @@ body {
 .kamoku {
   background-color: #d3d3d3;
 }
-
+#attention {
+  color:red;
+}
