@@ -11,4 +11,16 @@ body {
 .kamoku {
   background-color: #d3d3d3;
 }
-
+#attention {
+  color: red;
+}
+.kamoku_name {
+  font-size: 26px;
+}
+.data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+}
+/*グリットで再現 divにデータを入れて利用して*/
