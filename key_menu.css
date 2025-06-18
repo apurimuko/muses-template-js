@@ -10,6 +10,9 @@ body {
 }
 .kamoku {
   background-color: #d3d3d3;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 #attention {
   color: red;
@@ -19,8 +22,8 @@ body {
 }
 .data {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 /*グリットで再現 divにデータを入れて利用して*/
