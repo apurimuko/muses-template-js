@@ -9,51 +9,65 @@ body {
 }
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: #333;
   color: white;
-  padding: 10px 20px;
-}
-
-.left,
-.center,
-.right {
-  display: flex;
+  padding: 10px;
   align-items: center;
-  gap: 10px;
-  text-align: center;
 }
 
-.center {
+header > div {
   flex: 1;
-  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
 }
 
+/* ハンバーガーとPC版を近づける */
+#menu-icon {
+  margin-right: 4px;
+}
+#pc-label {
+  margin-left: 0px;
+}
+
+/* PC版と残り時間を離す */
+#time {
+  margin-left: 12px;
+}
+
+/* 残り時間とユーザー名を離す */
+#username {
+  margin-left: 16px;
+}
+
+/* ハンバーガーメニュー */
 .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
-
 .hamburger span {
-  width: 25px;
-  height: 3px;
+  width: 20px;
+  height: 2px;
   background: white;
-  margin: 3px 0;
+  margin: 2px 0;
 }
 
-button {
+/* ログアウトボタンの中身を中央寄せに */
+#logout-button {
+  display: flex;
+  justify-content: center;
+}
+#logout-button button {
   background-color: #555;
   color: white;
   border: none;
-  padding: 5px 10px;
+  padding: 2px 3px;
   border-radius: 4px;
   cursor: pointer;
 }
-
-button:hover {
+#logout-button button:hover {
   background-color: #777;
 }
 
@@ -61,4 +75,25 @@ button:hover {
   .center {
     display: none;
   }
+}
+
+#menu-icon {
+  margin-right: 2px; /* PC版と適切な間隔 */
+}
+
+#pc-label {
+  font-weight: normal;
+}
+
+#username {
+  margin-right: 16px;
+  white-space: nowrap;
+}
+
+#logout-button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
