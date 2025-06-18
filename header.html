@@ -8,21 +8,19 @@
   </head>
   <body>
     <header>
-      <div class="left">
-        <div class="hamburger" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div>PC版</div>
+      <div id="menu-icon" class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <div class="center">
-        <div id="time">残り時間 <br />--:--</div>
-      </div>
+      <div id="pc-label">PC版</div>
 
-      <div class="right">
-        <div>ユーザー名<br />Taro</div>
+      <div id="time">残り時間<br /><span id="clock">--:--</span></div>
+
+      <div id="username">ユーザー名<br />Taro</div>
+
+      <div id="logout-button">
         <button onclick="logout()">ログアウト</button>
       </div>
     </header>
@@ -44,11 +42,10 @@
       function updateTime() {
         const minutes = Math.floor(remainingSeconds / 60);
         const seconds = remainingSeconds % 60;
-        document.getElementById(
-          "time"
-        ).textContent = `残り時間：${minutes}:${seconds
+        document.getElementById("clock").textContent = `${minutes}:${seconds
           .toString()
           .padStart(2, "0")}`;
+
         if (remainingSeconds > 0) {
           remainingSeconds--;
           setTimeout(updateTime, 1000);
