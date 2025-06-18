@@ -12,5 +12,8 @@ body {
   background-color: #d3d3d3;
 }
 #attention {
-  color:red;
+  color: red;
+}
+.kamoku_name {
+  font-size: 26px;
 }
