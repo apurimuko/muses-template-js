@@ -34,3 +34,8 @@ body {
 .data div {
   padding-left: 2rem;
 }
+
+/* 科目日別一覧 */
+table#date_list{
+  background-color: #d3d3d3;
+}
