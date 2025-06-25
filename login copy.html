@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MUSESログイン</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- ユーザー名の入力とボタン -->
+    ユーザー名：<input id="usernameInput" />
+    <button id="loginButton">ログイン</button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // セッション情報を初期化し、初期表示の名前を入れる
+        sessionStorage.removeItem("username");
+        document.getElementById("usernameInput").value = "武庫川 花子";
+
+        // ボタンのクリックイベントをJavaScriptで設定
+        const loginBtn = document.getElementById("loginButton");
+        loginBtn.addEventListener("click", () => {
+          const username = document.getElementById("usernameInput").value;
+          if (!username) {
+            alert("ユーザー名を入力してください");
+          } else {
+            sessionStorage.setItem("username", username);
+            location.href = "header.html"; // ヘッダー付きページへ移動
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
