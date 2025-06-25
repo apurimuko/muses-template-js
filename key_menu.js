@@ -50,6 +50,10 @@ fetch("key_menu.json")
   .catch((error) => {
     console.error("エラー:", error);
   });
+
+// ヘッダーを取り込むスクリプト
 fetch("header.html")
   .then((response) => response.text())
-  .then((data) => (document.querySelector("#header").innerHTML = data));
+  .then((data) => (document.querySelector("#header").innerHTML = data))
+  // .then((data) => console.log(data))
+  .then(() => loadHeaderData());
