@@ -111,3 +111,53 @@ button {
 .menu-button:hover {
   background-color: #777;
 }
+/* メニュー全体の見た目 */
+#menu {
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  margin-top: 0;
+  border-top: 1px solid #666;
+}
+
+.hidden {
+  display: none;
+}
+
+#menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#menu > ul > li {
+  margin-bottom: 10px;
+}
+
+/* 詳細メニュー */
+.detail {
+  margin-top: 5px;
+  margin-left: 1em;
+  list-style-type: circle;
+}
+
+/* ＋ボタン */
+.toggle-detail {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+/* メニュー内リンクを白にする（通常状態） */
+#menu a {
+  color: white;
+  text-decoration: none; /* 下線を消したい場合 */
+}
+
+/* マウスホバー時のスタイル（必要に応じて） */
+#menu a:hover {
+  text-decoration: underline; /* 強調表示 */
+  color: #ffecb3; /* 例：薄い黄色なども選べます */
+}
