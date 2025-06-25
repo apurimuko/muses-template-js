@@ -19,11 +19,18 @@ body {
 }
 .kamoku_name {
   font-size: 26px;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
 }
 .data {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr;
-  gap: 1rem;
+  gap: 0.5rem;
 }
+
 /*グリットで再現 divにデータを入れて利用して*/
+
+.data div {
+  padding-left: 2rem;
+}

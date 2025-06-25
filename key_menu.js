@@ -50,3 +50,6 @@ fetch("key_menu.json")
   .catch((error) => {
     console.error("エラー:", error);
   });
+fetch("header.html")
+  .then((response) => response.text())
+  .then((data) => (document.querySelector("#header").innerHTML = data));
