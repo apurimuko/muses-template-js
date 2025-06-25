@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (username) {
     const usernameDiv = document.getElementById("username");
     usernameDiv.innerHTML += `<span>${username}</span>`;
-  } else {
-    alert("ログインしていません。ログインページに移動します。");
-    location.href = "login copy.html"; // ←ログイン画面のファイル名に合わせて修正
-    return; // 以下の処理を止める
-  }
+  } //else {
+  //alert("ログインしていません。ログインページに移動します。");
+  //location.href = "login copy.html"; // ←ログイン画面のファイル名に合わせて修正
+  //return; // 以下の処理を止める
+  ///}
 
   // ログアウト処理
   const logoutButton = document.getElementById("logout");
