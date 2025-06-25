@@ -111,3 +111,64 @@ button {
 .menu-button:hover {
   background-color: #777;
 }
+/* メニュー全体の見た目 */
+#menu {
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  margin-top: 0;
+  border-top: 1px solid #666;
+}
+
+.hidden {
+  display: none;
+}
+
+#menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#menu > ul > li {
+  margin-bottom: 10px;
+}
+
+/* 詳細メニュー */
+.detail {
+  margin-top: 5px;
+  margin-left: 1em;
+  list-style-type: circle;
+}
+
+/* ＋ボタン */
+.toggle-detail {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+/* メニュー本体：アニメーション用 */
+.menu-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: #444;
+  color: white;
+  padding: 0 10px;
+  border-top: 1px solid #666;
+}
+
+/* 開いた状態を表すクラス */
+.menu-container.open {
+  max-height: 300px; /* 必要に応じて調整。十分に大きければOK */
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* 隠すときに使う */
+.hidden {
+  display: none;
+}
