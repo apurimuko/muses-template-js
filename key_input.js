@@ -12,11 +12,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // データごとにinfoの要素を作成
   for (const item of data) {
-    const record = document.createElement("div");
-    record.className = "record";
+    const record = document.createElement("tr");
+    //record.className = "data";
     // 各プロパティ（from, date, subjectなど）ごとにdivを生成
     for (const [prop, val] of Object.entries(item)) {
-      const el = document.createElement("div");
+      const el = document.createElement("td");
       // 'from' だけはHTMLをそのまま挿入（リンクなど含むため）
       if (prop == "from") {
         el.innerHTML = val;
