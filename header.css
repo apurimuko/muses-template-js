@@ -150,25 +150,14 @@ button {
   font-size: 1em;
 }
 
-/* メニュー本体：アニメーション用 */
-.menu-container {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-  background-color: #444;
+/* メニュー内リンクを白にする（通常状態） */
+#menu a {
   color: white;
-  padding: 0 10px;
-  border-top: 1px solid #666;
+  text-decoration: none; /* 下線を消したい場合 */
 }
 
-/* 開いた状態を表すクラス */
-.menu-container.open {
-  max-height: 300px; /* 必要に応じて調整。十分に大きければOK */
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-/* 隠すときに使う */
-.hidden {
-  display: none;
+/* マウスホバー時のスタイル（必要に応じて） */
+#menu a:hover {
+  text-decoration: underline; /* 強調表示 */
+  color: #ffecb3; /* 例：薄い黄色なども選べます */
 }
