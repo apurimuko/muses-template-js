@@ -4,9 +4,14 @@ function toggleMenu() {
 }
 
 // ログアウト処理
-function logout() {
-  alert("ログアウトしました");
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const logoutButton = document.getElementById("logout");
+
+  logoutButton.addEventListener("click", () => {
+    sessionStorage.removeItem("username"); // セッション情報削除（任意）
+    location.href = "login copy.html"; // login.htmlに遷移
+  });
+});
 
 // 残り時間のタイマー表示
 let remainingSeconds = 2400; // 40分
