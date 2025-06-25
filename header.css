@@ -90,10 +90,15 @@ button {
   white-space: nowrap;
 }
 
-#logout-button {
+.menu-button {
   background-color: #555;
   color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: #777;
 }
