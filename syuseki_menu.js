@@ -1,10 +1,11 @@
 "use strict";
-fetch("key_menu.json")
+
+fetch("syuseki_menu.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error("読み込みに失敗しました");
     }
-    return response.json(); // 一度だけ呼ぶ
+    return response.json();
   })
   .then((data) => {
     const container = document.getElementById("container");
@@ -17,6 +18,11 @@ fetch("key_menu.json")
       nameDiv.className = "kamoku_name";
       nameDiv.textContent = subject.name;
       kamokuDiv.appendChild(nameDiv);
+
+      const semesterDiv = document.createElement("div");
+      semesterDiv.className = "semester";
+      semesterDiv.textContent = "前期";
+      kamokuDiv.appendChild(semesterDiv);
 
       container.appendChild(kamokuDiv);
     });
