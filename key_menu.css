@@ -36,6 +36,16 @@ body {
 }
 
 /* 科目日別一覧 */
-table#date_list{
+table#date_list {
   background-color: #d3d3d3;
+}
+
+table#date_list {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 2rem;
+  text-align: center;
+  width: 400px; /* 横幅を画面いっぱいに */
+  border-collapse: collapse;
+  font-size: 18px; /* 文字を大きく */
 }

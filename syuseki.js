@@ -1,6 +1,6 @@
 "use strict";
 
-fetch("attendance.json") // JSONファイルのパスを指定
+fetch("syuseki.json") // JSONファイルのパスを指定
   .then((response) => {
     if (!response.ok) throw new Error("読み込みに失敗しました");
     return response.json();
