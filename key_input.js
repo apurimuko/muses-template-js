@@ -1,7 +1,7 @@
-"use strict"
+"use strict";
 
 document.addEventListener("DOMContentLoaded", async () => {
-    // JSONファイル（key_input.json）を取得し、データを解析
+  // JSONファイル（key_input.json）を取得し、データを解析
   const res = await fetch("key_input.json"); // 非同期で取得
   const obj = await res.json(); // JSONとしてパース
   const data = obj.list; // 配列データを取得
@@ -32,3 +32,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     date_list.appendChild(record);
   }
 });
+
+// ヘッダーを取り込むスクリプト
+fetch("header.html")
+  .then((response) => response.text())
+  .then((data) => (document.querySelector("#header").innerHTML = data))
+  // .then((data) => console.log(data))
+  .then(() => loadHeaderData());

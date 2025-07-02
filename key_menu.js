@@ -12,6 +12,12 @@ fetch("key_menu.json")
     data.list.forEach((subject) => {
       const kamokuDiv = document.createElement("div");
       kamokuDiv.className = "kamoku";
+      kamokuDiv.style.cursor = "pointer"; // カーソルを手の形に
+
+      // クリックで syuseki.html に移動
+      kamokuDiv.addEventListener("click", () => {
+        window.location.href = "key_input.html";
+      });
 
       const nameDiv = document.createElement("div");
       nameDiv.className = "kamoku_name";
