@@ -49,3 +49,7 @@ table#date_list {
   border-collapse: collapse;
   font-size: 18px; /* 文字を大きく */
 }
+#title {
+  font-size: 30px;
+  font-weight: 700;
+}
