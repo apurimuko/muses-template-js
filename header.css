@@ -161,3 +161,13 @@ button {
   text-decoration: underline; /* 強調表示 */
   color: #ffecb3; /* 例：薄い黄色なども選べます */
 }
+
+.center-title {
+  text-align: center;
+  color: #333;
+}
+
+.center-title:hover {
+  transform: translate(-50%, -52%) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}

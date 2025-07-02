@@ -5,10 +5,23 @@
     <title>ヘッダー例</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="header.css" rel="stylesheet" />
+    <script src="MUSEShome.js"></script>
   </head>
   <body>
-    <div id="menu-title">MUSES</div>
-    <h1>MUSES</h1>
-    <script src="header.js"></script>
+    <div id="header"></div>
+    <h1 class="center-title">MUSES</h1>
+    <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.querySelector("#header").innerHTML = data;
+
+          // ヘッダーが挿入された後にJSを動かす
+          const script = document.createElement("script");
+          script.src = "header.js";
+          script.onload = () => loadHeaderData();
+          document.body.appendChild(script);
+        });
+    </script>
   </body>
 </html>
