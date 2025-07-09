@@ -27,7 +27,7 @@ function loadHeaderData() {
   if (logoutButton) {
     logoutButton.addEventListener("click", () => {
       sessionStorage.removeItem("username");
-      location.href = "login copy.html";
+      location.href = "index.html";
     });
   }
 
